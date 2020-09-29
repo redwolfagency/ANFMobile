@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "758712858031",
+    "firebase_url": "https://anfapp-8116b.firebaseio.com",
+    "project_id": "anfapp-8116b",
+    "storage_bucket": "anfapp-8116b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758712858031:android:03bd6c807f869610adeb5a",
+        "android_client_info": {
+          "package_name": "com.redwolf.anfandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "758712858031-5ns45c0sbfr0r4mhtqhrtovm9mg4b017.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOAg1VzWdXzi1VPv5GwCmO0Kak9_MeT7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "758712858031-5ns45c0sbfr0r4mhtqhrtovm9mg4b017.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "758712858031-crv8d7m6vd1jv1an9a9h49v0kb3l02cv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.redwolf.anfios"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
