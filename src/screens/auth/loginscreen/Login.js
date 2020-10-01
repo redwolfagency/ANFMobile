@@ -1,7 +1,5 @@
 import React from 'react';
-import { Button, ImageBackground, StyleSheet, Text, View } from 'react-native';
-
-
+import { Button, TouchableWithoutFeedback, ImageBackground, StyleSheet, Text, View } from 'react-native';
 
 
 export default function Login(){
@@ -11,8 +9,17 @@ export default function Login(){
             <View style={styles.overlay}>
             <View style={styles.contentText}>
                 <View style={styles.viewButton}>
-                    <Button title="S'inscrire"/>
-                    <Button  title="Connexion"/>
+                    <TouchableWithoutFeedback >
+                        <View style={styles.singUp}>
+                            <Text style={styles.singUpText}>S'inscrire</Text>
+                        </View> 
+                    </TouchableWithoutFeedback>
+                    <TouchableWithoutFeedback >
+                        <View style={styles.singIn}>
+                            <Text style={styles.singUpText}>Connexion</Text>
+                        </View> 
+                    </TouchableWithoutFeedback>
+                    
                 </View>
                 <Text style={styles.text}>Mot de passe oublié ?</Text>
              </View>
@@ -49,6 +56,32 @@ const styles = StyleSheet.create({
         padding:10,
         width: "50%",
         height:"10%",
+    },
+    singUp:{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor:"#1a9f74",
+        height: 40,
+        width: 180,
+        borderRadius:50,
+        marginBottom: 20,
+    },
+    singIn:{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: 40,
+        width: 180,
+        borderRadius:50,
+        borderColor: "#ffffff",
+        borderWidth: 3,
+       
+    },
+    singUpText:{
+        color:"white",
+        fontWeight: "700",
+        fontSize: 22,
     },
     text:{
         color:"white",
