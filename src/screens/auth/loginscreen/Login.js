@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, TouchableHighlight, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { Button, Image, TouchableHighlight, ImageBackground, StyleSheet, Text, View } from 'react-native';
 
 
 export default function Login(){
@@ -7,7 +7,7 @@ export default function Login(){
     return (
         <ImageBackground source={require('./img/LoginPircture.jpg')} style={styles.loginImage}>
             <View style={styles.overlay}>
-            {/* <Image source={require('./img/Logo.svg')}/> */}
+            <Image source={require('./img/LogoANF.png')} style={styles.logoAnf}/> 
             <View style={styles.contentText}>
                 <View style={styles.viewButton}>
                     <TouchableHighlight >
@@ -44,8 +44,14 @@ const styles = StyleSheet.create({
     overlay:{
         backgroundColor: 'rgba(7,7,113,0.6)',
         display: "flex",
+        alignItems: "center",
         justifyContent: 'flex-end',
         height:"100%",
+    },
+    logoAnf:{
+        width:270,
+        height:220,
+        marginBottom:160,
     },
     contentText:{
         alignItems:"center",
@@ -63,7 +69,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor:"#1a9f74",
-        height: 45,
+        height: 40,
         width: 200,
         borderRadius:50,
         marginBottom: 30,
