@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, TouchableWithoutFeedback, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { Button, TouchableHighlight, ImageBackground, StyleSheet, Text, View } from 'react-native';
 
 
 export default function Login(){
@@ -7,18 +7,19 @@ export default function Login(){
     return (
         <ImageBackground source={require('./img/LoginPircture.jpg')} style={styles.loginImage}>
             <View style={styles.overlay}>
+            {/* <Image source={require('./img/Logo.svg')}/> */}
             <View style={styles.contentText}>
                 <View style={styles.viewButton}>
-                    <TouchableWithoutFeedback >
+                    <TouchableHighlight >
                         <View style={styles.singUp}>
                             <Text style={styles.singUpText}>S'inscrire</Text>
                         </View> 
-                    </TouchableWithoutFeedback>
-                    <TouchableWithoutFeedback >
+                    </TouchableHighlight>
+                    <TouchableHighlight >
                         <View style={styles.singIn}>
                             <Text style={styles.singUpText}>Connexion</Text>
                         </View> 
-                    </TouchableWithoutFeedback>
+                    </TouchableHighlight>
                     
                 </View>
                 <Text style={styles.text}>Mot de passe oublié ?</Text>
@@ -62,18 +63,18 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor:"#1a9f74",
-        height: 40,
-        width: 180,
+        height: 45,
+        width: 200,
         borderRadius:50,
-        marginBottom: 20,
+        marginBottom: 30,
     },
     singIn:{
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         height: 40,
-        width: 180,
-        borderRadius:50,
+        width: 200,
+        borderRadius:45,
         borderColor: "#ffffff",
         borderWidth: 3,
        
@@ -86,6 +87,8 @@ const styles = StyleSheet.create({
     text:{
         color:"white",
         fontSize:16,
+        textDecorationLine: "underline",
+        marginBottom: 15,
     }
    
 });
