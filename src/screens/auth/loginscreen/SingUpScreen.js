@@ -3,7 +3,7 @@ import { Button, Image, TouchableHighlight, ImageBackground, StyleSheet, Text, V
 
 
 
-export default function SingUpScreen(){
+export default function SingUpScreen({navigation}){
    
     return (
         <View>
