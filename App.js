@@ -1,51 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Button, Image, TouchableHighlight, ImageBackground, StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import SingUpScreen  from "./src/screens";
+import { StyleSheet, Text, View } from 'react-native';
+import {Login}  from "./src/screens";
 
-const Stack = createStackNavigator();
 
-function ButtonSingUp() {
-  return (
-  <TouchableHighlight>
-    <View style={styles.singUp}>
-      <Text style={styles.singUpText}>S'inscrire</Text>
-    </View> 
-  </TouchableHighlight>
-  );
-}
-function ButtonSingIn() {
-  return (
-  <TouchableHighlight >
-    <View style={styles.singIn}>
-        <Text style={styles.singUpText}>Connexion</Text>
-    </View> 
-  </TouchableHighlight> 
-  );
-}
  
 export default function App()  {
   return (
-    <ImageBackground source={require('./assets/imgs/LoginPircture.jpg')} style={styles.loginImage}>
-            <View style={styles.overlay}>
-            <Image source={require('./assets/imgs/LogoANF.png')} style={styles.logoAnf}/> 
-            <View style={styles.contentText}>
-              <View style={styles.viewButton}>
-                <NavigationContainer>
-                  <Stack.Navigator >
-                    <Stack.Screen name="ButtonSingUp" component={ButtonSingUp} />
-                    <Stack.Screen name="ButtonSingIn" component={ButtonSingIn} />
-                  </Stack.Navigator>
-                </NavigationContainer>
-                </View>
-                <Text style={styles.text}>Mot de passe oublié ?</Text>
-             </View>
-            </View>
-            <StatusBar style="auto" />
-        </ImageBackground>
-   
+    <View>
+      <Login></Login>
+      <StatusBar style="auto" />
+    </View>
     
   );
 }
