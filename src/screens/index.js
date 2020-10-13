@@ -1,5 +1,2 @@
-export { default as loginscreen } from './auth/loginscreen/logiscreen'
-
-export { default as registrationscreen } from './users/registrationscreen/registrationscreen'
-
-//export { default as homescreen } from 
+export{default as SignUp} from  "./auth/signup"
+export{default as HomeScreen} from "./home/Homescreen";

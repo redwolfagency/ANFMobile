@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button, Image, TouchableHighlight, ImageBackground, StyleSheet, Text, View } from 'react-native';
 
-export default function LoginScreen(){
+export default function Signup(){
     return(
-        <view>
-            <Text></Text>
-        </view>
-    )
+     <View>
+         <Text>test</Text>
+     </View>
+    );
 }
