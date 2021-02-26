@@ -1,44 +1,20 @@
 import React from 'react';
 import { Button, Image, TouchableHighlight, ImageBackground, StyleSheet, Text, View } from 'react-native';
-import { NativeRouter, Route, Link } from "react-router-native";
 
 
-
-const routes =[
-    {
-        path: "/signup",
-        component: Signup
-      }
-]
-
-
-export default function HomeScreen(){
-   
-    return (
+export default function HomeScreen({navigation}){
+ return (
          <ImageBackground source={require('./imgs/Fond.jpg')} style={styles.loginImage}>
              <View style={styles.overlay}>
             <Image source={require('./imgs/LogoANF.png')} style={styles.logoAnf}/> 
             <View style={styles.contentText}>
-                <NativeRouter>
+
                 <View style={styles.viewButton}>
-                    <Link  to="/signup">
-                       <TouchableHighlight >
-                           <View style={styles.singUp}>
-                               <Text style={styles.singUpText}>S'inscrire</Text>
-                            </View>
-                        </TouchableHighlight>
-                    </Link>
-                    {/* <Link> */}
-                {/*        <TouchableHighlight >*/}
-                {/*            <View style={styles.singIn}>*/}
-                {/*                <Text style={styles.singUpText}>Connexion</Text>*/}
-                {/*            </View> */}
-                {/*        </TouchableHighlight>*/}
-                {/*    </Link> *!/*/}
-              
+                    <Button style={styles.singUp}
+                            onPress={()=> navigation.navigate("SignUp")}
+                            title={`Go to SignUp`} />
                 </View>
-                <Route path="/signup" component={SignUp} />
-                </NativeRouter>
+
                 <Text style={styles.text}>Mot de passe oublié ?</Text>
              </View>
             </View>
