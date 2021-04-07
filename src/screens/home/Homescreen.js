@@ -10,9 +10,12 @@ export default function HomeScreen({navigation}){
             <View style={styles.contentText}>
 
                 <View style={styles.viewButton}>
-                    <Button style={styles.singUp}
-                            onPress={()=> navigation.navigate("SignUp")}
-                            title={`Go to SignUp`} />
+                    <TouchableHighlight style={styles.singUp} onPress={()=> navigation.navigate("SignUp")}>
+                        <Text style={styles.singUpText}>S'inscrire</Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight style={styles.singIn} onPress={()=> navigation.navigate("LoginScreen")}>
+                        <Text style={styles.singUpText}>Connexion</Text>
+                    </TouchableHighlight>
                 </View>
 
                 <Text style={styles.text}>Mot de passe oublié ?</Text>
